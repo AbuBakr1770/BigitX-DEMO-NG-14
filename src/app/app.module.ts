@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
+// import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 // import { ToolbarModule } from 'primeng/toolbar';
 
 import { AppComponent } from './app.component';
@@ -26,10 +26,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { NavnavnavComponent } from './component/navnavnav/navnavnav.component';
-// import { Collapse } from '@ng-bootstrap/ng-bootstrap/collapse';
-
-// import {CardModule} from 'primeng/card';
+import { NewnavComponent } from './component/newnav/newnav.component';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
 
@@ -50,6 +51,7 @@ import { NavnavnavComponent } from './component/navnavnav/navnavnav.component';
     ContactComponent,
     FooterComponent,
     NavnavnavComponent,
+    NewnavComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,10 @@ import { NavnavnavComponent } from './component/navnavnav/navnavnav.component';
     HttpClientModule,
     ReactiveFormsModule,
     MatToolbarModule,
-    NgxNavbarModule
+    // NgxNavbarModule,
+    MatSidenavModule,
+    CollapseModule.forRoot(),
+    NgbCollapseModule
     // CardModule,
     // ToolbarModule
 

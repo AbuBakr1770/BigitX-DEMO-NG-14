@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  iscoll:boolean = false
+
+  switch(){
+    // alert("hello")
+    this.iscoll = ! this.iscoll
+    console.log(this.iscoll);
+
+
+  }
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
