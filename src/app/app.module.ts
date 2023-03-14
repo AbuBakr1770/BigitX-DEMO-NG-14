@@ -6,6 +6,7 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 // import { ToolbarModule } from 'primeng/toolbar';
 
 import { AppComponent } from './app.component';
+import {MatListModule} from '@angular/material/list';
 import { CountComponent } from './component/count/count.component';
 import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter';
 import { HeaderComponent } from './component/header/header.component';
@@ -27,10 +28,14 @@ import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+
 import { NavnavnavComponent } from './component/navnavnav/navnavnav.component';
 import { NewnavComponent } from './component/newnav/newnav.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
 
@@ -55,6 +60,9 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule,
     NgxAnimatedCounterModule,
     SwiperModule,
     BrowserAnimationsModule,
@@ -63,6 +71,7 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     ReactiveFormsModule,
     MatToolbarModule,
+    MatDividerModule,
     // NgxNavbarModule,
     MatSidenavModule,
     CollapseModule.forRoot(),

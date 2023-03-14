@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,16 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  iscoll:boolean = false
 
-  switch(){
-    // alert("hello")
-    this.iscoll = ! this.iscoll
-    console.log(this.iscoll);
+  navbarOpen = false;
 
-
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
-  constructor() { }
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map((result: { matches: any; }) => result.matches)
+    );
+
+  showToggleButton:boolean = true
+
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
 
