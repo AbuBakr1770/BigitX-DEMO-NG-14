@@ -1,0 +1,20 @@
+<p-menubar [model]="items">
+
+  <div>
+    <p-button type="button" class="mr-2" (click)="visibleSidebar1 = true" icon="pi pi-arrow-right"></p-button>
+      <input type="text" pInputText placeholder="Search">
+      <button type="button" pButton label="Logout" icon="pi pi-power-off" style="margin-left:.25em"></button>
+  </div>
+</p-menubar>
+
+
+<p-sidebar [(visible)]="visibleSidebar1" [transitionOptions]="'170ms'" >
+
+  <header>
+   <h3>
+     hello
+
+   </h3>
+  </header>
+</p-sidebar>
+
