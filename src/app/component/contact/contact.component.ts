@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit(){
     // console.log(this.contactForm.value);
-    this.http.post('http://localhost:5000/sendmail', this.contactForm.value).subscribe(data=>{
+    this.http.post('https://important-dog-outfit.cyclic.app/sendmail', this.contactForm.value).subscribe(data=>{
       console.log(data);
     })
     this.contactForm.reset()

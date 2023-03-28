@@ -14,7 +14,8 @@ import { MenubarModule } from 'primeng/menubar';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InputTextModule } from 'primeng/inputtext';
-import {MdbAccordionModule} from 'mdb-angular-ui-kit/accordion'
+import {MdbAccordionModule} from 'mdb-angular-ui-kit/accordion';
+
 import { SwiperModule } from 'swiper/angular';
 // import { Navbar2Component } from './component/navbar2/navbar2.component';
 
